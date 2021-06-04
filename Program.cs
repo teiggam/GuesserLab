@@ -51,7 +51,8 @@ namespace GuesserLab
                 Console.WriteLine("This version guesses a random number.  If that number is incorrect, it will not guess it again, but will guess another random number.\n");
                 Console.WriteLine($"{HalfiesGuesser(randomNumber)}.");
                 Console.WriteLine("This version guesses halfway between each previous guess, starting at 50.\n");
-
+                Console.WriteLine($"{BinarySearchGuess(randomNumber)}.");
+                Console.WriteLine("This version uses a binary search algorithm to guess the number. \n");
 
 
                 goOn = GuessAgain();
@@ -490,6 +491,40 @@ namespace GuesserLab
         }
 
 
+        //The HalfiesGuesser.. I was basically trying to do a binary search guesser.
+        //I made a binary search guesser, and it varies a little from my halfies guesser, so I'm keeping both for funsies.
+
+        public static string BinarySearchGuess(int randomNum)
+        {
+            int start = 0;
+            int end = 100;
+            int tries = 0;
+            int guess = 0;
+            while (guess != randomNum)
+            {
+                guess = (end - start) / 2 + start;
+                tries++;
+
+                if (guess > randomNum)
+                {
+                    end = guess;
+                    continue;
+                }
+                else if (guess < randomNum)
+                {
+                    start = guess;
+                    continue;
+                }
+                else
+                {
+                    break;
+                }
+            }
+            return $"The Binary Search Guesser took {tries} times to guess the number {randomNum} ";
+        }
+
+
+
 
         public static bool GuessAgain()
         {
@@ -513,4 +548,4 @@ namespace GuesserLab
         }
     }
 }
-   
+
