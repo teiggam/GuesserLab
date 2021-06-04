@@ -169,7 +169,7 @@ namespace GuesserLab
 
         public static string BruteForceGuess(int randomNum)
         {
-            int tries = 0;
+            int tries = 1;
             int i = 100;
             while (i != randomNum)
             {
@@ -188,7 +188,7 @@ namespace GuesserLab
         //and I was ridiculously determined to make it work, and it actually guesses the number fairly quickly.
         public static string HalfiesGuesser(int randomNum)
         {
-            int tries = 0;
+            int tries = 1;
             int i = 50;
             do
             {
