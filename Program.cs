@@ -30,7 +30,6 @@ namespace GuesserLab
                     tries++;
                 }
                 Console.WriteLine($"It took you {tries} tries to guess {randomNumber}");
-
                 Console.WriteLine();
                 int i = 1;
                 response = "";
@@ -50,6 +49,10 @@ namespace GuesserLab
                 Console.WriteLine("This version guesses a random number between 1 and 100 everytime. \n");
                 Console.WriteLine($"{EliminationGuess(randomNumber)}.");
                 Console.WriteLine("This version guesses a random number.  If that number is incorrect, it will not guess it again, but will guess another random number.\n");
+                Console.WriteLine($"{HalfiesGuesser(randomNumber)}.");
+                Console.WriteLine("This version guesses halfway between each previous guess, starting at 50.\n");
+
+
 
                 goOn = GuessAgain();
             }
@@ -133,6 +136,10 @@ namespace GuesserLab
             }
 
             return $"The Random Number Guesser took {tries} times to guess the number {randomNum} ";
+
+            //Best case:  Random number is guessed with first random number guess:  1 try.
+            //Worst case:  Random number generated every time never guesses the original random number:  Infinite tries.
+            //Average case:  Somewhere between the two...
         }
 
         public static string EliminationGuess(int randomNum)
@@ -153,6 +160,10 @@ namespace GuesserLab
             while (compGuess != randomNum);
 
             return $"The Elimination Guesser took {tries} times to guess the number {randomNum} ";
+
+            //Best Case:  Random number guessed is the random number; 1 try.
+            //Worst Case:  Random number guessed is wrong 99 times until the last random number guessed is correct.  100 trys.
+            //Average:  Is probably somewhere in the middle
         }
 
         public static string BruteForceGuess(int randomNum)
@@ -165,7 +176,321 @@ namespace GuesserLab
                 tries++;
             }
             return $"The Brute Force Guesser took {tries} times to guess the number {randomNum} ";
+
+            //Best case scenario:  Random number is 100, and it takes one try.
+            //Worst case scenario:  Random number is 1 and it takes 100 tries.
+            //Average is probably 50
         }
+
+        //I 100% know there must be a more efficient way to do the following guessing method, because I remember talking about something similiar in class today,
+        //but I spent like 2 hours putting together 300 lines of if else conditionals
+        //and I was ridiculously determined to make it work, and it actually guesses the number fairly quickly.
+        public static string HalfiesGuesser(int randomNum)
+        {
+            int tries = 0;
+            int i = 50;
+            do
+            {
+                if (i == randomNum)
+                {
+                    break;
+                }
+                else if (i > randomNum)
+                {
+                    i = 25;
+                    tries++;
+                    if (i == randomNum)
+                    {
+                        break;
+                    }
+                    else if (i > randomNum)
+                    {
+                        i = 13;
+                        tries++;
+
+                        if (i == randomNum)
+                        {
+                            break;
+                        }
+                        else if (i > randomNum)
+                        {
+                            i = 7;
+                            tries++;
+                            if (i == randomNum)
+                            {
+                                break;
+                            }
+                            else if (i > randomNum)
+                            {
+                                do
+                                {
+                                    i--;
+                                    tries++;
+                                }
+                                while (i != randomNum);
+
+                            }
+
+
+                            else
+                            {
+                                do
+                                {
+                                    i++;
+                                    tries++;
+                                }
+                                while (i != randomNum);
+
+                            }
+                        }
+                        else
+                        {
+                            i = 21;
+                            tries++;
+                            if (i == randomNum)
+                            {
+                                break;
+                            }
+                            else if (i > randomNum)
+                            {
+                                do
+                                {
+                                    i--;
+                                    tries++;
+                                }
+                                while (i != randomNum);
+
+                            }
+                            else
+                            {
+                                do
+                                {
+                                    i++;
+                                    tries++;
+                                }
+                                while (i != randomNum);
+                            }
+                        }
+                    }
+
+                    else
+                    {
+                        i = 38;
+                        tries++;
+                        if (i == randomNum)
+                        {
+                            break;
+                        }
+                        else if (i > randomNum)
+                        {
+                            i = 29;
+                            tries++;
+                            if (i == randomNum)
+                            {
+                                break;
+                            }
+                            else if (i > randomNum)
+                            {
+                                do
+                                {
+                                    i--;
+                                    tries++;
+                                }
+                                while (i != randomNum);
+                            }
+                            else
+                            {
+                                do
+                                {
+                                    i++;
+                                    tries++;
+                                }
+                                while (i != randomNum);
+                            }
+                        }
+                        else
+                        {
+                            i = 44;
+                            tries++;
+                            if (i == randomNum)
+                            {
+                                break;
+                            }
+                            else if (i > randomNum)
+                            {
+                                do
+                                {
+                                    i--;
+                                    tries++;
+                                }
+                                while (i != randomNum);
+                            }
+                            else
+                            {
+                                do
+                                {
+                                    i++;
+                                    tries++;
+                                }
+                                while (i != randomNum);
+
+                            }
+                        }
+                    }
+                }
+
+                else if (i < randomNum)
+                {
+                    i = 75;
+                    tries++;
+                    if (i == randomNum)
+                    {
+                        break;
+                    }
+                    else if (i < randomNum)
+                    {
+                        i = 88;
+                        tries++;
+                        if (i == randomNum)
+                        {
+                            break;
+                        }
+                        else if (i < randomNum)
+                        {
+                            i = 94;
+                            tries++;
+                            if (i == randomNum)
+                            {
+                                break;
+                            }
+                            else if (i < randomNum)
+                            {
+                                do
+                                {
+                                    i++;
+                                    tries++;
+                                }
+                                while (i != randomNum);
+
+                            }
+                            else
+                            {
+                                do
+                                {
+                                    i--;
+                                    tries++;
+                                }
+                                while (i != randomNum);
+
+
+                            }
+                        }
+                        else
+                        {
+                            i = 80;
+                            tries++;
+                            if (i == randomNum)
+                            {
+                                break;
+                            }
+                            else if (i > randomNum)
+                            {
+                                do
+                                {
+                                    i--;
+                                    tries++;
+                                }
+                                while (i != randomNum);
+
+                            }
+                            else
+                            {
+                                do
+                                {
+                                    i++;
+                                    tries++;
+                                }
+                                while (i != randomNum);
+
+                            }
+
+                        }
+                    }
+
+                    else
+                    {
+                        i = 63;
+                        tries++;
+                        if (i == randomNum)
+                        {
+                            break;
+                        }
+                        else if (i > randomNum)
+                        {
+                            i = 56;
+                            tries++;
+                            if (i == randomNum)
+                            {
+                                break;
+                            }
+                            else if (i < randomNum)
+                            {
+                                do
+                                {
+                                    i++;
+                                    tries++;
+                                }
+                                while (i != randomNum);
+
+                            }
+                            else
+                            {
+                                do
+                                {
+                                    i--;
+                                    tries++;
+                                }
+                                while (i != randomNum);
+                            }
+                        }
+                        else
+                        {
+                            i = 71;
+                            tries++;
+                            if (i == randomNum)
+                            {
+                                break;
+                            }
+                            else if (i > randomNum)
+                            {
+                                do
+                                {
+                                    i--;
+                                    tries++;
+                                }
+                                while (i != randomNum);
+                            }
+                            else
+                            {
+                                do
+                                {
+                                    i++;
+                                    tries++;
+                                }
+                                while (i != randomNum);
+
+                            }
+                        }
+                    }
+                }
+            }
+
+            while (i != randomNum);
+            return $"The Halfies Guesser took {tries} times to guess the number {randomNum} ";
+        }
+
+
+
         public static bool GuessAgain()
         {
             Console.WriteLine();
@@ -188,3 +513,4 @@ namespace GuesserLab
         }
     }
 }
+   
