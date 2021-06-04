@@ -42,11 +42,8 @@ namespace GuesserLab
                         i++;
                     }
                 }
-
                 Console.WriteLine($"The Linear Guesser took {i} times to guess the number {randomNumber}.");
                 Console.WriteLine("This version guesses starting at one and ticks up to 100.\n");
-
-
                 Console.WriteLine($"{BruteForceGuess(randomNumber)}.");
                 Console.WriteLine("This version guesses starting at 100 and ticks down to 1.\n");
                 Console.WriteLine($"{RandomGuessAlg(randomNumber)}.");
@@ -55,9 +52,7 @@ namespace GuesserLab
                 Console.WriteLine("This version guesses a random number.  If that number is incorrect, it will not guess it again, but will guess another random number.\n");
 
                 goOn = GuessAgain();
-
             }
-
         }
 
         public static int GetUserInput()
