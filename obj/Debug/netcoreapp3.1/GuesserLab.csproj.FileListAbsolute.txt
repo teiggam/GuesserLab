@@ -1,0 +1,13 @@
+C:\Users\Maggie\Documents\Grand Circus\Projects\GuesserLab\GuesserLab\bin\Debug\netcoreapp3.1\GuesserLab.exe
+C:\Users\Maggie\Documents\Grand Circus\Projects\GuesserLab\GuesserLab\bin\Debug\netcoreapp3.1\GuesserLab.deps.json
+C:\Users\Maggie\Documents\Grand Circus\Projects\GuesserLab\GuesserLab\bin\Debug\netcoreapp3.1\GuesserLab.runtimeconfig.json
+C:\Users\Maggie\Documents\Grand Circus\Projects\GuesserLab\GuesserLab\bin\Debug\netcoreapp3.1\GuesserLab.runtimeconfig.dev.json
+C:\Users\Maggie\Documents\Grand Circus\Projects\GuesserLab\GuesserLab\bin\Debug\netcoreapp3.1\GuesserLab.dll
+C:\Users\Maggie\Documents\Grand Circus\Projects\GuesserLab\GuesserLab\bin\Debug\netcoreapp3.1\GuesserLab.pdb
+C:\Users\Maggie\Documents\Grand Circus\Projects\GuesserLab\GuesserLab\obj\Debug\netcoreapp3.1\GuesserLab.csprojAssemblyReference.cache
+C:\Users\Maggie\Documents\Grand Circus\Projects\GuesserLab\GuesserLab\obj\Debug\netcoreapp3.1\GuesserLab.AssemblyInfoInputs.cache
+C:\Users\Maggie\Documents\Grand Circus\Projects\GuesserLab\GuesserLab\obj\Debug\netcoreapp3.1\GuesserLab.AssemblyInfo.cs
+C:\Users\Maggie\Documents\Grand Circus\Projects\GuesserLab\GuesserLab\obj\Debug\netcoreapp3.1\GuesserLab.csproj.CoreCompileInputs.cache
+C:\Users\Maggie\Documents\Grand Circus\Projects\GuesserLab\GuesserLab\obj\Debug\netcoreapp3.1\GuesserLab.dll
+C:\Users\Maggie\Documents\Grand Circus\Projects\GuesserLab\GuesserLab\obj\Debug\netcoreapp3.1\GuesserLab.pdb
+C:\Users\Maggie\Documents\Grand Circus\Projects\GuesserLab\GuesserLab\obj\Debug\netcoreapp3.1\GuesserLab.genruntimeconfig.cache
